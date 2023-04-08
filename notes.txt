@@ -1,1 +1,1 @@
-sudo chown -R (replace with linux user) .
+sudo chown -R user .
