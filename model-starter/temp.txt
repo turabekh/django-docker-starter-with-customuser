@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  python:
+    build:
+      context: ./
+      dockerfile: ./compose/local/Dockerfile
+    entrypoint: bash django-launcher.sh
+    volumes:
+      - .:/usr/src/app
+    env_file:
+      - ./compose/.env/.env.local
+    expose:
+      - 8000
+    depends_on:
+      - postgresql
+      - redis
+
+      

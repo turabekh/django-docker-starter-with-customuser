@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  python:
+    build:
+      context: ./
+      dockerfile: ./compose/local/Dockerfile
+    entrypoint: bash start-project.sh
+    volumes:
+      - .:/usr/src/app
+      
